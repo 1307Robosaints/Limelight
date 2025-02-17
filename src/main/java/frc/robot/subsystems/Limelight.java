@@ -1,7 +1,5 @@
 package frc.robot.subsystems;
 
-
-
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
@@ -26,7 +24,7 @@ public class Limelight extends SubsystemBase {
         }
     }
 
-    //Print all the available keys in the Limelight NetworkTable
+    //Print all the keys in the Limelight NetworkTable
     public void printLimelightNetworkTableKeys() {
         System.out.println("Keys in Limelight Table:");
         for (String key : limelightTable.getKeys()) {
@@ -47,7 +45,9 @@ public class Limelight extends SubsystemBase {
         System.out.println("ty: " + ty); // Vertical offset
         System.out.println("ta: " + ta); // Target area
 
-        if (tv == 1.0) {
+    }
+
+       /*  if (tv == 1.0) {
             System.out.println("Target visible! Horizontal offset: " + tx + ", Vertical offset: " + ty + ", Area: " + ta);
         } else {
             System.out.println("No target detected.");
@@ -67,6 +67,7 @@ public class Limelight extends SubsystemBase {
         System.out.println("LED Mode set to: " + ledMode);
     }
 
+        */
     //Printing Data
     public void debugLimelightInfo() {
         // Check NetworkTables connection
